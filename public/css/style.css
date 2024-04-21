@@ -1,0 +1,189 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+}
+body {
+    color: white;
+    perspective: 1px;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform-style: preserve-3d;
+    background-color: #0f0f0f;
+}
+/* schermata principale */
+header {
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 50px;
+}
+@media (max-width: 660px) {
+    header h1 {
+        letter-spacing: 10px;
+    }
+}
+
+header,
+header:before {
+    background: 50% 50% / cover;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url(/img/wp9216000.webp);
+    background-size: cover;
+    transform-origin: center center 0;
+    background-position: 50%;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+/* tutto il body */ 
+.containerr {
+    z-index: 2;
+    position: absolute;
+    top: 100vh;
+    background: #0f0f0f;
+
+    width: 100vw;
+    display: flex;
+
+    background-image: linear-gradient(to right,#131313 1px, transparent 1px),linear-gradient(to bottom,#131313 1px, transparent 1px);
+    background-size: 0.5vh 0.5vh;
+    height: 100;
+
+    line-height: 30px;
+    font-weight: lighter;
+    padding: 40px;
+    color: grey;
+
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 400px;
+}
+
+/* Tutte le carte */
+/* .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    padding: 200px;
+    grid-gap: 40px;
+    margin-right: 90px;
+} */
+
+.card{
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+}
+
+.containers{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+    margin-top: 10px;
+}
+
+img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+.containers:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+.card1>.containers:after{
+    background-image: linear-gradient(
+        135deg,
+        #0100ec,
+        #fb36f4
+    );
+    opacity: 15%;
+}
+.card2>.containers:after{
+    background-image: linear-gradient(
+        135deg,
+        #2bdce3,
+        #42ffdb
+    );
+    opacity: 15%;
+}
+.card3>.containers:after{
+    background-image: linear-gradient(
+        135deg,
+        #e1ff00,
+        #2ef81c
+    );
+    opacity: 15%;
+}
+.card4>.containers:after{
+    background-image: linear-gradient(
+        135deg,
+        #ffab1d,
+        #f8501c
+    );
+    opacity: 15%;
+}
+.details{
+    padding: 20px 10px;
+}
+.details>h3{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+.details>p{
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.mtwolf{
+    margin-top: 1100px;
+}
+.cardsWolf{
+    width: 350px;
+    height: 500px;
+}
+.h2-titolo{
+    margin: 150px 0 150px 0;
+}
+/* .cardsaw{
+    height: 70vh;
+    overflow: hidden;
+} */
